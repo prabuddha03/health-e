@@ -16,7 +16,7 @@ exports.deleteOne = Model =>
     });
   });
 
-  exports.updateOne = Model =>
+exports.updateOne = Model =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -33,7 +33,7 @@ exports.deleteOne = Model =>
         data: doc
       }
     });
-});
+  });
 
 exports.createOne = Model =>
   catchAsync(async (req, res, next) => {
@@ -47,7 +47,7 @@ exports.createOne = Model =>
     });
   });
 
-  exports.getOne = (Model, popOptions) =>
+exports.getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
     let query = Model.findById(req.params.id);
     if (popOptions) query = query.populate(popOptions);
@@ -65,7 +65,7 @@ exports.createOne = Model =>
     });
   });
 
-  exports.getAll = Model =>
+exports.getAll = Model =>
   catchAsync(async (req, res, next) => {
     // To allow for nested GET reviews on tour (hack)
     let filter = {};
