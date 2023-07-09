@@ -1,0 +1,11 @@
+{
+  "name": "backendh4bhealthe",
+  "version": "1.0.0",
+  "description": "Backend of health-e, an website to solve various health problems through tech. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
